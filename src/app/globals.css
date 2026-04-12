@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #ee6c36;
+  --color-background: #faf9f6;
+  --color-foreground: #1a1a1a;
+  --font-sans: var(--font-space);
+  --font-hero: var(--font-geist);
+  --font-anim1: var(--font-bitcount);
+  --font-anim2: var(--font-saira);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base resets or custom utility classes can go here */
+
+@media (min-width: 768px) {
+  body.custom-cursor-active,
+  body.custom-cursor-active *:not(input):not(textarea) {
+    cursor: none !important;
+  }
+}
