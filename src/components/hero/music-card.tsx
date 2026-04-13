@@ -49,9 +49,9 @@ export function MusicCard({ className }: { className?: string }) {
             <span className="text-[11px] font-bold tracking-widest text-[#888] uppercase pl-1">
                 What I'm currently listening to
             </span>
-            <div className="flex flex-col p-5 md:p-6 bg-[#0a0a0a] rounded-[20px] border border-white/5 w-full shadow-2xl shadow-black">
+            <div className="flex flex-col p-5 md:p-6 bg-[#0a0a0a] rounded-[20px] border border-white/5 w-full h-[230px] md:h-auto shadow-2xl shadow-black">
                 <div
-                    className="relative flex items-center gap-6 w-full"
+                    className="relative flex items-center gap-5 md:gap-6 w-full"
                     style={{ perspective: "1000px" }}
                 >
                     {/* Image Card Stack */}
