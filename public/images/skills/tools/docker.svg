@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Docker whale -->
+  <!-- Whale body -->
+  <path d="M8 60 Q8 78 26 78 L74 78 Q92 78 92 60 Q92 46 80 44 Q78 30 64 30 Q58 30 56 36 Q50 32 44 34 Q36 28 28 34 Q18 32 14 44 Q8 44 8 60Z" fill="#2496ED"/>
+  <!-- Container stacks on whale back -->
+  <!-- Row 1 -->
+  <rect x="30" y="22" width="12" height="10" rx="2" fill="white"/>
+  <rect x="44" y="22" width="12" height="10" rx="2" fill="white"/>
+  <rect x="58" y="22" width="12" height="10" rx="2" fill="white"/>
+  <!-- Row 2 -->
+  <rect x="37" y="10" width="12" height="10" rx="2" fill="white"/>
+  <rect x="51" y="10" width="12" height="10" rx="2" fill="white"/>
+  <!-- Whale tail -->
+  <path d="M74 78 Q88 78 94 68 Q88 64 80 70" fill="#2496ED"/>
+  <!-- Eye -->
+  <circle cx="26" cy="58" r="5" fill="white"/>
+  <circle cx="27" cy="58" r="2.5" fill="#2496ED"/>
+  <!-- Water spray lines -->
+  <line x1="50" y1="4" x2="46" y2="10" stroke="#2496ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="50" y1="4" x2="50" y2="10" stroke="#2496ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="50" y1="4" x2="54" y2="10" stroke="#2496ED" stroke-width="2" stroke-linecap="round"/>
+</svg>
