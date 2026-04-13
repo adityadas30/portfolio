@@ -45,11 +45,11 @@ export function MusicCard({ className }: { className?: string }) {
     const rotations = useMemo(() => [4, -2, -6, 5], []);
 
     return (
-        <div className={cn("flex flex-col gap-4 md:gap-5 w-full max-w-[420px] md:w-[420px]", className)}>
+        <div className={cn("flex flex-col gap-5 hidden md:flex", className)}>
             <span className="text-[11px] font-bold tracking-widest text-[#888] uppercase pl-1">
                 What I'm currently listening to
             </span>
-            <div className="flex flex-col p-5 md:p-6 bg-[#0a0a0a] rounded-[20px] border border-white/5 w-full shadow-2xl shadow-black">
+            <div className="flex flex-col p-6 bg-[#0a0a0a] rounded-[20px] border border-white/5 w-[420px] shadow-2xl shadow-black">
                 <div
                     className="relative flex items-center gap-6 w-full"
                     style={{ perspective: "1000px" }}
@@ -133,7 +133,7 @@ export function MusicCard({ className }: { className?: string }) {
                                 <h3 className="text-[17px] font-bold text-white leading-snug">
                                     {activeItem.title}
                                 </h3>
-                                <p className="text-[12px] md:text-[13px] font-medium text-[#888] mt-1 md:mt-1.5 line-clamp-1">
+                                <p className="text-[13px] font-medium text-[#888] mt-1.5">
                                     {activeItem.description}
                                 </p>
                             </motion.div>
