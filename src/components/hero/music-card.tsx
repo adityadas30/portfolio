@@ -45,7 +45,7 @@ export function MusicCard({ className }: { className?: string }) {
     const rotations = useMemo(() => [4, -2, -6, 5], []);
 
     return (
-        <div className={cn("flex flex-col gap-4 md:gap-5 w-full", className)}>
+        <div className={cn("flex flex-col gap-4 md:gap-5 w-full max-w-[360px] md:max-w-none md:w-[420px] mx-auto md:mx-0", className)}>
             <span className="text-[11px] font-bold tracking-widest text-[#888] uppercase pl-1">
                 What I'm currently listening to
             </span>

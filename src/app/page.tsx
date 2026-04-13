@@ -163,7 +163,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="h-[90vh] bg-black flex flex-col justify-center px-6 md:px-24 lg:px-32">
-        <div className="max-w-7xl w-full mx-auto relative grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
+        <div className="max-w-7xl w-full mx-auto relative grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-12 mt-16 md:mt-0 items-center">
           
           {/* Left Side: Text Details */}
           <div className="flex flex-col items-center text-center md:items-stretch md:text-left">
@@ -204,7 +204,7 @@ export default function Home() {
           </div>
 
           {/* Right Side: Music Card */}
-          <div className="flex justify-center md:justify-end lg:pr-12 w-full mt-10 md:mt-0">
+          <div className="flex justify-center md:justify-end lg:pr-12 w-full mt-4 md:mt-0">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
