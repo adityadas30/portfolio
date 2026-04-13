@@ -21,18 +21,11 @@ export function CyberGlitchText({
 }: CyberGlitchTextProps) {
   const [displayText, setDisplayText] = useState(text);
   const [isGlitching, setIsGlitching] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(true);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef);
 
-  useEffect(() => {
-    setIsDesktop(window.innerWidth >= 768);
-  }, []);
-
   const scramble = () => {
-    if (!isDesktop) return; // Keep mobile perfectly static
-    
     let iteration = 0;
     setIsGlitching(true);
     clearInterval(intervalRef.current as NodeJS.Timeout);
@@ -60,37 +53,37 @@ export function CyberGlitchText({
   };
 
   useEffect(() => {
-    if (scrambleOnMount && isDesktop) {
+    if (scrambleOnMount) {
       scramble();
     }
     return () => clearInterval(intervalRef.current as NodeJS.Timeout);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text, scrambleOnMount, isDesktop]);
+  }, [text, scrambleOnMount]);
 
   // Occasional slow loop
   useEffect(() => {
-    if (!isDesktop || !isInView) return;
+    if (!isInView) return;
     
     const occasionalGlitch = setInterval(() => {
       scramble();
     }, 12000); // Glitch every 12 seconds instead of constantly
     
     return () => clearInterval(occasionalGlitch);
-  }, [isDesktop, isInView]);
+  }, [isInView]);
 
   return (
     <div
       ref={containerRef}
       className={cn("relative inline-block group", className)}
       onMouseEnter={() => {
-        if (!isGlitching && isDesktop) scramble();
+        if (!isGlitching) scramble();
       }}
     >
       {/* Base Text */}
-      <span className="relative z-10">{isDesktop ? displayText : text}</span>
+      <span className="relative z-10">{displayText}</span>
 
       {/* Very Subtle Glitch Layers for Chromatic Aberration */}
-      {isGlitching && isDesktop && (
+      {isGlitching && (
         <>
           <motion.span
             className="absolute top-0 left-[-1px] z-0 text-[#ee6c36] opacity-30 mix-blend-screen"

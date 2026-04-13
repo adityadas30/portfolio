@@ -120,7 +120,7 @@ export function MusicCard({ className }: { className?: string }) {
                     </div>
 
                     {/* Text Area */}
-                    <div className="flex flex-col justify-center flex-1">
+                    <div className="flex flex-col justify-center flex-1 h-[60px] md:h-[64px]">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeItem.id}
@@ -130,7 +130,7 @@ export function MusicCard({ className }: { className?: string }) {
                                 transition={{ duration: 0.3 }}
                                 className="w-full pr-2"
                             >
-                                <h3 className="text-[17px] font-bold text-white leading-snug">
+                                <h3 className="text-[15px] sm:text-[17px] font-bold text-white leading-snug line-clamp-2 md:line-clamp-1">
                                     {activeItem.title}
                                 </h3>
                                 <p className="text-[12px] md:text-[13px] font-medium text-[#888] mt-1 md:mt-1.5 line-clamp-1">
