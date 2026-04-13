@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Python snake logo simplified -->
+  <!-- Blue snake head (top) -->
+  <path d="M50 8 C32 8 22 16 22 30 L22 42 L50 42 L50 46 L18 46 C10 46 6 52 6 62 C6 74 14 84 28 86 L36 86 L36 74 C36 66 42 62 50 62 L64 62 C72 62 78 56 78 48 L78 28 C78 16 66 8 50 8Z" fill="#3776AB"/>
+  <!-- Yellow snake body (bottom) -->
+  <path d="M50 92 C68 92 78 84 78 70 L78 58 L50 58 L50 54 L82 54 C90 54 94 48 94 38 C94 26 86 16 72 14 L64 14 L64 26 C64 34 58 38 50 38 L36 38 C28 38 22 44 22 52 L22 72 C22 84 34 92 50 92Z" fill="#FFD43B"/>
+  <!-- Eye dots -->
+  <circle cx="40" cy="24" r="4" fill="white"/>
+  <circle cx="60" cy="76" r="4" fill="white"/>
+</svg>
